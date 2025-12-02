@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICHE RÉVISION SVT 1AC - ULTRA DÉTAILLÉ (PDF + PPT)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 50%, #f5f5f5 100%);
+            color: #333; 
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container { max-width: 1600px; margin: 0 auto; }
+        
+        h1 { 
+            background: linear-gradient(135deg, #037A40, #4CAF50);
+            color: white; 
+            text-align: center; 
+            padding: 40px;
+            margin-bottom: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(3,122,64,0.4);
+            font-size: 3.2em;
+        }
+        
+        .revision-section { 
+            margin: 60px 0; 
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 3px solid #e0e0e0;
+        }
+        .revision-section:hover { transform: translateY(-10px); }
+        
+        .revision-header {
+            background: linear-gradient(135deg, #FF9800, #F57C00);
+            color: white; 
+            padding: 35px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .revision-number {
+            background: linear-gradient(135deg, #2196F3, #1976D2); 
+            color: white; 
+            padding: 15px 30px;
+            border-radius: 30px; 
+            font-size: 2.2em; 
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(33,150,243,0.4);
+        }
+        
+        /* Schémas Fiche Révision */
+        .schema-container {
+            text-align: center; 
+            margin: 40px 0; 
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.9));
+            border-radius: 25px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+            border: 5px solid #e8e8e8;
+        }
+        .schema-main { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .ecosystems-card {
+            background: linear-gradient(135deg, rgba(76,175,80,0.2), rgba(76,175,80,0.1));
+            border: 4px solid #4CAF50;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(76,175,80,0.25);
+        }
+        .animal-card {
+            background: linear-gradient(135deg, rgba(208,68,68,0.15), rgba(208,68,68,0.08));
+            border: 4px solid #D04444;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(208,68,68,0.25);
+        }
+        .schema-icon { font-size: 60px; display: block; margin-bottom: 20px; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); }
+        .schema-name { font-size: 24px; font-weight: bold; color: #2c3e50; margin-bottom: 20px; text-transform: uppercase; }
+        .schema-attributes { font-size: 16px; color: #555; line-height: 1.6; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 15px; border-left: 6px solid #FF9800; }
+        .schema-attributes li { margin: 10px 0; padding-left: 10px; position: relative; }
+        .schema-attributes li::before { content: "✓"; color: #4CAF50; font-weight: bold; margin-right: 10px; }
+        
+        .exercice { background: linear-gradient(135deg, #e8f5e8, #c8e6c9); padding: 40px; border-left: 12px solid #4CAF50; }
+        .correction { background: linear-gradient(135deg, #fff3e0, #ffe0b2); padding: 40px; border-left: 12px solid #FF9800; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.15); }
+        th, td { border: 2px solid #e8e8e8; padding: 22px; text-align: left; font-size: 15px; }
+        th { background: linear-gradient(135deg, #037A40, #4CAF50); color: white; font-weight: bold; font-size: 17px; }
+        tr:nth-child(even) { background: #f8f9fa; }
+        tr:hover { background: linear-gradient(90deg, #e3f2fd, #bbdefb); transform: scale(1.02); }
+        
+        .method-box {
+            background: linear-gradient(135deg, #fff8e1, #ffecb3);
+            border: 4px solid #FF9800;
+            border-radius: 20px;
+            padding: 35px;
+            margin: 35px 0;
+            box-shadow: 0 12px 35px rgba(255,152,0,0.25);
+        }
+        .dm-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border: 4px solid #2196F3;
+            border-radius: 20px;
+            padding: 35px;
+            margin: 35px 0;
+            box-shadow: 0 12px 35px rgba(33,150,243,0.25);
+        }
+        
+        .legend {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.9));
+            padding: 35px;
+            border-radius: 25px;
+            margin: 35px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            border: 4px solid #e8e8e8;
+        }
+        .legend-item {
+            text-align: center;
+            background: rgba(3,122,64,0.1);
+            padding: 25px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #037A40;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 FICHE RÉVISION SVT 1AC - ULTRA COMPLÈTE (PDF + PPT)</h1>
+        
+        <!-- Légende Fiche Révision -->
+        <div class="legend">
+            <div class="legend-item">
+                🏞️ <strong>3 ÉCOSYSTÈMES</strong><br>
+                <small>Oued Zegzel + Lac Sidi Boughaba + Steppe Sahara</small>
+            </div>
+            <div class="legend-item">
+                🐌 <strong>ANIMAUX DÉTAILLÉS</strong><br>
+                <small>Escargot + Pigeon + Criquet + Chat</small>
+            </div>
+            <div class="legend-item">
+                🌳 <strong>VÉGÉTAUX COMPLETS</strong><br>
+                <small>Fougère + Sapin + Caroubier + Mousse</small>
+            </div>
+            <div class="legend-item">
+                🧪 <strong>PROTOCOLES ESCARGOT</strong><br>
+                <small>Respiration + Variables + Résultats</small>
+            </div>
+        </div>
+
+        <!-- SECTION 1 : ÉCOSYSTÈMES -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">1️⃣ ÉCOSYSTÈMES</div>
+                <h2>🏞️ Biocnose & Biotope - 3 Exemples Détaillés</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🎯 ACTIVITÉ 1 : Oued Zegzel (Berkane)</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="ecosystems-card">
+                            <span class="schema-icon">🏞️</span>
+                            <div class="schema-name">OUED ZEGZEL</div>
+                            <ul class="schema-attributes">
+                                <li><strong>🌾 BIOCNÔSE :</strong> Roseau, Libellule, Truite, Grenouille</li>
+                                <li><strong>🏔️ BIOTOPE :</strong> Roche, Eau douce, Sable, Végétation rivulaire</li>
+                                <li><strong>🔍 Critère :</strong> Identification parfaite ✓</li>
+                            </ul>
+                        </div>
+                        <div class="ecosystems-card">
+                            <span class="schema-icon">🌊</span>
+                            <div class="schema-name">LAC SIDI BOUGHABA</div>
+                            <ul class="schema-attributes">
+                                <li><strong>🌾 BIOCNÔSE :</strong> Algue, Poisson, Grenouille</li>
+                                <li><strong>🏔️ BIOTOPE :</strong> Vase, Eau saumâtre</li>
+                                <li><strong>⚡ Différence :</strong> Eau saumâtre vs Sol sec steppe</li>
+                            </ul>
+                        </div>
+                        <div class="ecosystems-card">
+                            <span class="schema-icon">🏜️</span>
+                            <div class="schema-name">STEPPE SAHARA</div>
+                            <ul class="schema-attributes">
+                                <li><strong>🌾 BIOCNÔSE :</strong> Artemisia, Gerboise, Lézard</li>
+                                <li><strong>🏔️ BIOTOPE :</strong> Sol sec, Arides</li>
+                                <li><strong>⚡ Diversité :</strong> Végétation adaptée sécheresse</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>📝 DM1 : Forêt vs Littoral</h3>
+                <div class="dm-box">
+                    <ul style="font-size: 18px; line-height: 2;">
+                        <li><strong>🌲 FORÊT :</strong> Chêne vert, Aigle, Serpent (biocnose) | Sol, Rocher (biotope)</li>
+                        <li><strong>🌊 LITTORAL :</strong> Requin, Tortue, Poisson (biocnose) | Sable, Eau salée (biotope)</li>
+                        <li><strong>🎯 DIVERSITÉ :</strong> Êtres vivants + supports différents</li>
+                        <li><strong>🎯 UNITÉ :</strong> Biocnose + Biotope = Écosystème</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ CORRECTION ÉCOSYSTÈMES</h3>
+                <table>
+                    <tr><th>ÉCOSYSTÈME</th><th>BIOCNÔSE (Vivants)</th><th>BIOTOPE (Supports)</th><th>PARTICULARITÉ</th></tr>
+                    <tr><td>🏞️ Oued Zegzel</td><td>Roseau, Libellule, Truite, Grenouille</td><td>Roche, Eau douce</td><td>Écosystème aquatique douce</td></tr>
+                    <tr><td>🌊 Lac Sidi Boughaba</td><td>Algue, Poisson, Grenouille</td><td>Vase, Eau saumâtre</td><td>Saumâtre vs Sahara sec</td></tr>
+                    <tr><td>🏜️ Steppe Sahara</td><td>Artemisia, Gerboise, Lézard</td><td>Sol sec aride</td><td>Adaptation sécheresse</td></tr>
+                    <tr><td>🌲 Forêt vs 🌊 Littoral</td><td>Chêne/Aigle vs Requin/Tortue</td><td>Sol vs Sable/Eau salée</td><td>Diversité/Unit écosystèmes</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION 2 : CLASSIFICATION Végétaux -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">2️⃣ CLASSIFICATION</div>
+                <h2>🌳 Végétaux + 🐛 Animaux (Fiche Révision)</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🌿 ACTIVITÉ Végétaux : Groupes Emboîtés</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="animal-card">
+                            <span class="schema-icon">🌿</span>
+                            <div class="schema-name">FOUGÈRE</div>
+                            <ul class="schema-attributes">
+                                <li>Sans graines (spores)</li>
+                                <li>Avec racines + tige</li>
+                                <li>Frondes divisées</li>
+                                <li><strong>Groupe :</strong> Ptéridophytes</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🌲</span>
+                            <div class="schema-name">SAPIN</div>
+                            <ul class="schema-attributes">
+                                <li>Graines dans cône</li>
+                                <li>Tige + racines</li>
+                                <li>Aiguilles persistantes</li>
+                                <li><strong>Groupe :</strong> Gymnospermes</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🌳</span>
+                            <div class="schema-name">CAROUBIER</div>
+                            <ul class="schema-attributes">
+                                <li>Graines dans fruit</li>
+                                <li>Tige ligneuse</li>
+                                <li>Feuilles composées</li>
+                                <li><strong>Groupe :</strong> Angiospermes</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🪨</span>
+                            <div class="schema-name">MOUSSE</div>
+                            <ul class="schema-attributes">
+                                <li>Sans racines</li>
+                                <li>Sans graines</li>
+                                <li>Tiges feuilles simples</li>
+                                <li><strong>Groupe :</strong> Bryophytes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ CORRECTION CLASSIFICATION VÉGÉTAUX</h3>
+                <table>
+                    <tr><th>VÉGÉTAL</th><th>ATTRIBUTS</th><th>CLÉ DÉTERMINATION</th><th>GROUPE</th></tr>
+                    <tr><td>🌿 Fougère</td><td>Sans graine + Tige+racines</td><td>Sans graine → Tige</td><td>Ptéridophytes</td></tr>
+                    <tr><td>🌲 Sapin</td><td>Graine cône + Tige+racines</td><td>Graines → Cône</td><td>Gymnospermes</td></tr>
+                    <tr><td>🌳 Caroubier</td><td>Graine fruit + Tige+racines</td><td>Graines → Fruit</td><td>Angiospermes</td></tr>
+                    <tr><td>🪨 Mousse</td><td>Sans racines + Sans graine</td><td>Sans racines</td><td>Bryophytes</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION 3 : Protocole Escargot -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">3️⃣ RESPIRATION</div>
+                <h2>🐌 Protocole Escargot (Pages 59-60)</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🧪 PROTOCOLE COMPLET ESCARGOT</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="animal-card">
+                            <span class="schema-icon">🐌</span>
+                            <div class="schema-name">HYPOTHÈSE</div>
+                            <ul class="schema-attributes">
+                                <li>"Si escargot dans boîte → O₂↓ + CO₂↑"</li>
+                                <li><strong>Var.Ind :</strong> Présence escargot</li>
+                                <li><strong>Var.Dép1 :</strong> Quantité dioxygène (oxymètre)</li>
+                                <li><strong>Var.Dép2 :</strong> Dioxyde carbone (eau chaux)</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">📊</span>
+                            <div class="schema-name">RÉSULTATS</div>
+                            <ul class="schema-attributes">
+                                <li><strong>Début :</strong> O₂=21% (EXP+TÉMOIN)</li>
+                                <li><strong>Fin 2h :</strong> EXP=19% | TÉMOIN=21%</li>
+                                <li><strong>Eau chaux :</strong> EXP=trouble | TÉMOIN=limpide</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>📈 CONCLUSION</h3>
+                <div class="dm-box">
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>✅ Hypothèse confirmée :</strong> Escargot respire → Consomme O₂ → Produit CO₂<br>
+                        <strong>Preuves :</strong> ↓O₂ EXP(19%) vs TÉMOIN(21%) + Turbidité eau chaux EXP
+                    </p>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ TABLEAU RÉSULTATS ESCARGOT</h3>
+                <table>
+                    <tr><th>MESURE</th><th>EXPÉRIENCE (Escargot)</th><th>TÉMOIN (Vide)</th><th>INTERPRÉTATION</th></tr>
+                    <tr><td>O₂ Début</td><td>21,0%</td><td>21,0%</td><td>Conditions identiques</td></tr>
+                    <tr><td>O₂ Fin (2h)</td><td>19,0%</td><td>21,0%</td><td>↓O₂ = Respiration</td></tr>
+                    <tr><td>Eau Chaux</td><td>Trouble (CO₂)</td><td>Limpide</td><td>CO₂ produit EXP</td></tr>
+                    <tr><td>Conclusion</td><td>H° Confirmée ✓</td><td>Contrôle valide</td><td>Escargot respire</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION 4 : DM + Appareils Respiratoires -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">4️⃣ DM + RESPIRATION</div>
+                <h2>📝 Devoirs Maison + Appareils Respiratoires</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🐦 DM1 : Pigeon (Page 50)</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="animal-card">
+                            <span class="schema-icon">🐦</span>
+                            <div class="schema-name">PIGEON</div>
+                            <ul class="schema-attributes">
+                                <li>Plumes + Colonne vertébrale</li>
+                                <li>Peau recouverte plumes</li>
+                                <li><strong>Groupe :</strong> Oiseaux</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🐭</span>
+                            <div class="schema-name">CRIQUET</div>
+                            <ul class="schema-attributes">
+                                <li>Trachées + Stigmates</li>
+                                <li>Sacs aériens + Réseau trachées</li>
+                                <li><strong>Milieu :</strong> Air terrestre</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🪱</span>
+                            <div class="schema-name">Sangsue</div>
+                            <ul class="schema-attributes">
+                                <li>Peau (respiration cutanée)</li>
+                                <li>Échanges gazeux transcutanés</li>
+                                <li><strong>Milieu :</strong> Eau douce</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ CORRECTION DM + RESPIRATION</h3>
+                <table>
+                    <tr><th>ANIMAL</th><th>ATTRIBUTS</th><th>GROUPE</th><th>APPAREIL RESPIRATOIRE</th><th>MILIEU</th></tr>
+                    <tr><td>🐦 Pigeon</td><td>Plumes + Colonne</td><td>Oiseaux</td><td>Poumons</td><td>Air</td></tr>
+                    <tr><td>🐭 Criquet</td><td>6 pattes + Sans colonne</td><td>Insectes</td><td>Trachées + Stigmates</td><td>Air terrestre</td></tr>
+                    <tr><td>🪱 Sangsue</td><td>Sans colonne + Corps annelé</td><td>Annélides</td><td>Peau (cutanée)</td><td>Eau douce</td></tr>
+                    <tr><td>🐱 Chat (Carnivore)</td><td>Dentition carnassière</td><td>Mammifères</td><td>Poumons</td><td>Air</td></tr>
+                    <tr><td>🦒 Girafe (Herbivore)</td><td>Cœcum développé</td><td>Mammifères</td><td>Poumons</td><td>Air</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px; padding: 60px; background: linear-gradient(135deg, #037A40, #4CAF50); color: white; border-radius: 30px; box-shadow: 0 25px 60px rgba(3,122,64,0.5);">
+            <h2>🎓 FICHE RÉVISION COMPLÈTE MAÎTRISÉE ✅</h2>
+            <p style="font-size: 22px; margin: 25px 0; line-height: 1.6;">
+                <strong>Contenu ultra-détaillé :</strong> 12 Schémas + 5 Tableaux + 3 Écosystèmes + 2 DM + Protocole Escargot<br>
+                <strong>Sources :</strong> [file:5] PDF Révision + [file:1][file:2][file:3][file:4] PPT Complémentaires
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICHE RÉVISION SVT 1AC - ULTRA DÉTAILLÉ (PDF + PPT)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 50%, #f5f5f5 100%);
+            color: #333; 
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container { max-width: 1600px; margin: 0 auto; }
+        
+        h1 { 
+            background: linear-gradient(135deg, #037A40, #4CAF50);
+            color: white; 
+            text-align: center; 
+            padding: 40px;
+            margin-bottom: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(3,122,64,0.4);
+            font-size: 3.2em;
+        }
+        
+        .revision-section { 
+            margin: 60px 0; 
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 3px solid #e0e0e0;
+        }
+        .revision-section:hover { transform: translateY(-10px); }
+        
+        .revision-header {
+            background: linear-gradient(135deg, #FF9800, #F57C00);
+            color: white; 
+            padding: 35px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .revision-number {
+            background: linear-gradient(135deg, #2196F3, #1976D2); 
+            color: white; 
+            padding: 15px 30px;
+            border-radius: 30px; 
+            font-size: 2.2em; 
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(33,150,243,0.4);
+        }
+        
+        /* Schémas Fiche Révision */
+        .schema-container {
+            text-align: center; 
+            margin: 40px 0; 
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.9));
+            border-radius: 25px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+            border: 5px solid #e8e8e8;
+        }
+        .schema-main { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .ecosystems-card {
+            background: linear-gradient(135deg, rgba(76,175,80,0.2), rgba(76,175,80,0.1));
+            border: 4px solid #4CAF50;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(76,175,80,0.25);
+        }
+        .animal-card {
+            background: linear-gradient(135deg, rgba(208,68,68,0.15), rgba(208,68,68,0.08));
+            border: 4px solid #D04444;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 12px 30px rgba(208,68,68,0.25);
+        }
+        .schema-icon { font-size: 60px; display: block; margin-bottom: 20px; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); }
+        .schema-name { font-size: 24px; font-weight: bold; color: #2c3e50; margin-bottom: 20px; text-transform: uppercase; }
+        .schema-attributes { font-size: 16px; color: #555; line-height: 1.6; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 15px; border-left: 6px solid #FF9800; }
+        .schema-attributes li { margin: 10px 0; padding-left: 10px; position: relative; }
+        .schema-attributes li::before { content: "✓"; color: #4CAF50; font-weight: bold; margin-right: 10px; }
+        
+        .exercice { background: linear-gradient(135deg, #e8f5e8, #c8e6c9); padding: 40px; border-left: 12px solid #4CAF50; }
+        .correction { background: linear-gradient(135deg, #fff3e0, #ffe0b2); padding: 40px; border-left: 12px solid #FF9800; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.15); }
+        th, td { border: 2px solid #e8e8e8; padding: 22px; text-align: left; font-size: 15px; }
+        th { background: linear-gradient(135deg, #037A40, #4CAF50); color: white; font-weight: bold; font-size: 17px; }
+        tr:nth-child(even) { background: #f8f9fa; }
+        tr:hover { background: linear-gradient(90deg, #e3f2fd, #bbdefb); transform: scale(1.02); }
+        
+        .method-box {
+            background: linear-gradient(135deg, #fff8e1, #ffecb3);
+            border: 4px solid #FF9800;
+            border-radius: 20px;
+            padding: 35px;
+            margin: 35px 0;
+            box-shadow: 0 12px 35px rgba(255,152,0,0.25);
+        }
+        .dm-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border: 4px solid #2196F3;
+            border-radius: 20px;
+            padding: 35px;
+            margin: 35px 0;
+            box-shadow: 0 12px 35px rgba(33,150,243,0.25);
+        }
+        
+        .legend {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.9));
+            padding: 35px;
+            border-radius: 25px;
+            margin: 35px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            border: 4px solid #e8e8e8;
+        }
+        .legend-item {
+            text-align: center;
+            background: rgba(3,122,64,0.1);
+            padding: 25px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #037A40;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 FICHE RÉVISION SVT 1AC - ULTRA COMPLÈTE (PDF + PPT)</h1>
+        
+        <!-- Légende Fiche Révision -->
+        <div class="legend">
+            <div class="legend-item">
+                🏞️ <strong>3 ÉCOSYSTÈMES</strong><br>
+                <small>Oued Zegzel + Lac Sidi Boughaba + Steppe Sahara</small>
+            </div>
+            <div class="legend-item">
+                🐌 <strong>ANIMAUX DÉTAILLÉS</strong><br>
+                <small>Escargot + Pigeon + Criquet + Chat</small>
+            </div>
+            <div class="legend-item">
+                🌳 <strong>VÉGÉTAUX COMPLETS</strong><br>
+                <small>Fougère + Sapin + Caroubier + Mousse</small>
+            </div>
+            <div class="legend-item">
+                🧪 <strong>PROTOCOLES ESCARGOT</strong><br>
+                <small>Respiration + Variables + Résultats</small>
+            </div>
+        </div>
+
+        <!-- SECTION 1 : ÉCOSYSTÈMES -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">1️⃣ ÉCOSYSTÈMES</div>
+                <h2>🏞️ Biocnose & Biotope - 3 Exemples Détaillés</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🎯 ACTIVITÉ 1 : Oued Zegzel (Berkane)</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="ecosystems-card">
+                            <span class="schema-icon">🏞️</span>
+                            <div class="schema-name">OUED ZEGZEL</div>
+                            <ul class="schema-attributes">
+                                <li><strong>🌾 BIOCNÔSE :</strong> Roseau, Libellule, Truite, Grenouille</li>
+                                <li><strong>🏔️ BIOTOPE :</strong> Roche, Eau douce, Sable, Végétation rivulaire</li>
+                                <li><strong>🔍 Critère :</strong> Identification parfaite ✓</li>
+                            </ul>
+                        </div>
+                        <div class="ecosystems-card">
+                            <span class="schema-icon">🌊</span>
+                            <div class="schema-name">LAC SIDI BOUGHABA</div>
+                            <ul class="schema-attributes">
+                                <li><strong>🌾 BIOCNÔSE :</strong> Algue, Poisson, Grenouille</li>
+                                <li><strong>🏔️ BIOTOPE :</strong> Vase, Eau saumâtre</li>
+                                <li><strong>⚡ Différence :</strong> Eau saumâtre vs Sol sec steppe</li>
+                            </ul>
+                        </div>
+                        <div class="ecosystems-card">
+                            <span class="schema-icon">🏜️</span>
+                            <div class="schema-name">STEPPE SAHARA</div>
+                            <ul class="schema-attributes">
+                                <li><strong>🌾 BIOCNÔSE :</strong> Artemisia, Gerboise, Lézard</li>
+                                <li><strong>🏔️ BIOTOPE :</strong> Sol sec, Arides</li>
+                                <li><strong>⚡ Diversité :</strong> Végétation adaptée sécheresse</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>📝 DM1 : Forêt vs Littoral</h3>
+                <div class="dm-box">
+                    <ul style="font-size: 18px; line-height: 2;">
+                        <li><strong>🌲 FORÊT :</strong> Chêne vert, Aigle, Serpent (biocnose) | Sol, Rocher (biotope)</li>
+                        <li><strong>🌊 LITTORAL :</strong> Requin, Tortue, Poisson (biocnose) | Sable, Eau salée (biotope)</li>
+                        <li><strong>🎯 DIVERSITÉ :</strong> Êtres vivants + supports différents</li>
+                        <li><strong>🎯 UNITÉ :</strong> Biocnose + Biotope = Écosystème</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ CORRECTION ÉCOSYSTÈMES</h3>
+                <table>
+                    <tr><th>ÉCOSYSTÈME</th><th>BIOCNÔSE (Vivants)</th><th>BIOTOPE (Supports)</th><th>PARTICULARITÉ</th></tr>
+                    <tr><td>🏞️ Oued Zegzel</td><td>Roseau, Libellule, Truite, Grenouille</td><td>Roche, Eau douce</td><td>Écosystème aquatique douce</td></tr>
+                    <tr><td>🌊 Lac Sidi Boughaba</td><td>Algue, Poisson, Grenouille</td><td>Vase, Eau saumâtre</td><td>Saumâtre vs Sahara sec</td></tr>
+                    <tr><td>🏜️ Steppe Sahara</td><td>Artemisia, Gerboise, Lézard</td><td>Sol sec aride</td><td>Adaptation sécheresse</td></tr>
+                    <tr><td>🌲 Forêt vs 🌊 Littoral</td><td>Chêne/Aigle vs Requin/Tortue</td><td>Sol vs Sable/Eau salée</td><td>Diversité/Unit écosystèmes</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION 2 : CLASSIFICATION Végétaux -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">2️⃣ CLASSIFICATION</div>
+                <h2>🌳 Végétaux + 🐛 Animaux (Fiche Révision)</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🌿 ACTIVITÉ Végétaux : Groupes Emboîtés</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="animal-card">
+                            <span class="schema-icon">🌿</span>
+                            <div class="schema-name">FOUGÈRE</div>
+                            <ul class="schema-attributes">
+                                <li>Sans graines (spores)</li>
+                                <li>Avec racines + tige</li>
+                                <li>Frondes divisées</li>
+                                <li><strong>Groupe :</strong> Ptéridophytes</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🌲</span>
+                            <div class="schema-name">SAPIN</div>
+                            <ul class="schema-attributes">
+                                <li>Graines dans cône</li>
+                                <li>Tige + racines</li>
+                                <li>Aiguilles persistantes</li>
+                                <li><strong>Groupe :</strong> Gymnospermes</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🌳</span>
+                            <div class="schema-name">CAROUBIER</div>
+                            <ul class="schema-attributes">
+                                <li>Graines dans fruit</li>
+                                <li>Tige ligneuse</li>
+                                <li>Feuilles composées</li>
+                                <li><strong>Groupe :</strong> Angiospermes</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🪨</span>
+                            <div class="schema-name">MOUSSE</div>
+                            <ul class="schema-attributes">
+                                <li>Sans racines</li>
+                                <li>Sans graines</li>
+                                <li>Tiges feuilles simples</li>
+                                <li><strong>Groupe :</strong> Bryophytes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ CORRECTION CLASSIFICATION VÉGÉTAUX</h3>
+                <table>
+                    <tr><th>VÉGÉTAL</th><th>ATTRIBUTS</th><th>CLÉ DÉTERMINATION</th><th>GROUPE</th></tr>
+                    <tr><td>🌿 Fougère</td><td>Sans graine + Tige+racines</td><td>Sans graine → Tige</td><td>Ptéridophytes</td></tr>
+                    <tr><td>🌲 Sapin</td><td>Graine cône + Tige+racines</td><td>Graines → Cône</td><td>Gymnospermes</td></tr>
+                    <tr><td>🌳 Caroubier</td><td>Graine fruit + Tige+racines</td><td>Graines → Fruit</td><td>Angiospermes</td></tr>
+                    <tr><td>🪨 Mousse</td><td>Sans racines + Sans graine</td><td>Sans racines</td><td>Bryophytes</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION 3 : Protocole Escargot -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">3️⃣ RESPIRATION</div>
+                <h2>🐌 Protocole Escargot (Pages 59-60)</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🧪 PROTOCOLE COMPLET ESCARGOT</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="animal-card">
+                            <span class="schema-icon">🐌</span>
+                            <div class="schema-name">HYPOTHÈSE</div>
+                            <ul class="schema-attributes">
+                                <li>"Si escargot dans boîte → O₂↓ + CO₂↑"</li>
+                                <li><strong>Var.Ind :</strong> Présence escargot</li>
+                                <li><strong>Var.Dép1 :</strong> Quantité dioxygène (oxymètre)</li>
+                                <li><strong>Var.Dép2 :</strong> Dioxyde carbone (eau chaux)</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">📊</span>
+                            <div class="schema-name">RÉSULTATS</div>
+                            <ul class="schema-attributes">
+                                <li><strong>Début :</strong> O₂=21% (EXP+TÉMOIN)</li>
+                                <li><strong>Fin 2h :</strong> EXP=19% | TÉMOIN=21%</li>
+                                <li><strong>Eau chaux :</strong> EXP=trouble | TÉMOIN=limpide</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>📈 CONCLUSION</h3>
+                <div class="dm-box">
+                    <p style="font-size: 20px; line-height: 1.8;">
+                        <strong>✅ Hypothèse confirmée :</strong> Escargot respire → Consomme O₂ → Produit CO₂<br>
+                        <strong>Preuves :</strong> ↓O₂ EXP(19%) vs TÉMOIN(21%) + Turbidité eau chaux EXP
+                    </p>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ TABLEAU RÉSULTATS ESCARGOT</h3>
+                <table>
+                    <tr><th>MESURE</th><th>EXPÉRIENCE (Escargot)</th><th>TÉMOIN (Vide)</th><th>INTERPRÉTATION</th></tr>
+                    <tr><td>O₂ Début</td><td>21,0%</td><td>21,0%</td><td>Conditions identiques</td></tr>
+                    <tr><td>O₂ Fin (2h)</td><td>19,0%</td><td>21,0%</td><td>↓O₂ = Respiration</td></tr>
+                    <tr><td>Eau Chaux</td><td>Trouble (CO₂)</td><td>Limpide</td><td>CO₂ produit EXP</td></tr>
+                    <tr><td>Conclusion</td><td>H° Confirmée ✓</td><td>Contrôle valide</td><td>Escargot respire</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- SECTION 4 : DM + Appareils Respiratoires -->
+        <div class="revision-section">
+            <div class="revision-header">
+                <div class="revision-number">4️⃣ DM + RESPIRATION</div>
+                <h2>📝 Devoirs Maison + Appareils Respiratoires</h2>
+            </div>
+            
+            <div class="exercice">
+                <h3>🐦 DM1 : Pigeon (Page 50)</h3>
+                <div class="schema-container">
+                    <div class="schema-main">
+                        <div class="animal-card">
+                            <span class="schema-icon">🐦</span>
+                            <div class="schema-name">PIGEON</div>
+                            <ul class="schema-attributes">
+                                <li>Plumes + Colonne vertébrale</li>
+                                <li>Peau recouverte plumes</li>
+                                <li><strong>Groupe :</strong> Oiseaux</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🐭</span>
+                            <div class="schema-name">CRIQUET</div>
+                            <ul class="schema-attributes">
+                                <li>Trachées + Stigmates</li>
+                                <li>Sacs aériens + Réseau trachées</li>
+                                <li><strong>Milieu :</strong> Air terrestre</li>
+                            </ul>
+                        </div>
+                        <div class="animal-card">
+                            <span class="schema-icon">🪱</span>
+                            <div class="schema-name">Sangsue</div>
+                            <ul class="schema-attributes">
+                                <li>Peau (respiration cutanée)</li>
+                                <li>Échanges gazeux transcutanés</li>
+                                <li><strong>Milieu :</strong> Eau douce</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="correction">
+                <h3>✅ CORRECTION DM + RESPIRATION</h3>
+                <table>
+                    <tr><th>ANIMAL</th><th>ATTRIBUTS</th><th>GROUPE</th><th>APPAREIL RESPIRATOIRE</th><th>MILIEU</th></tr>
+                    <tr><td>🐦 Pigeon</td><td>Plumes + Colonne</td><td>Oiseaux</td><td>Poumons</td><td>Air</td></tr>
+                    <tr><td>🐭 Criquet</td><td>6 pattes + Sans colonne</td><td>Insectes</td><td>Trachées + Stigmates</td><td>Air terrestre</td></tr>
+                    <tr><td>🪱 Sangsue</td><td>Sans colonne + Corps annelé</td><td>Annélides</td><td>Peau (cutanée)</td><td>Eau douce</td></tr>
+                    <tr><td>🐱 Chat (Carnivore)</td><td>Dentition carnassière</td><td>Mammifères</td><td>Poumons</td><td>Air</td></tr>
+                    <tr><td>🦒 Girafe (Herbivore)</td><td>Cœcum développé</td><td>Mammifères</td><td>Poumons</td><td>Air</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px; padding: 60px; background: linear-gradient(135deg, #037A40, #4CAF50); color: white; border-radius: 30px; box-shadow: 0 25px 60px rgba(3,122,64,0.5);">
+            <h2>🎓 FICHE RÉVISION COMPLÈTE MAÎTRISÉE ✅</h2>
+            <p style="font-size: 22px; margin: 25px 0; line-height: 1.6;">
+                <strong>Contenu ultra-détaillé :</strong> 12 Schémas + 5 Tableaux + 3 Écosystèmes + 2 DM + Protocole Escargot<br>
+                <strong>Sources :</strong> [file:5] PDF Révision + [file:1][file:2][file:3][file:4] PPT Complémentaires
+            </p>
+        </div>
+    </div>
+</body>
+</html>
